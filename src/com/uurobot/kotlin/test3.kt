@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
         fun4()
 }
 
-fun fun1() {
+private fun fun1() {
         // 传统用法
         val a = 2
         var max: Int = 0
@@ -28,7 +28,7 @@ fun fun1() {
         //val max = if (a > b) a else b
 }
 
-fun fun2() {
+private fun fun2() {
         val a = 2
         var max: Int = 0
         var b = 3
@@ -40,7 +40,7 @@ fun fun2() {
         }
 }
 
-fun fun3() {
+private fun fun3() {
         val a = 3
         val b = 2
         val max = if (a > b) a else b
