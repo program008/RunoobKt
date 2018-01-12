@@ -18,9 +18,13 @@ fun defineType() {
          * 这样可以保证不会出现空指针。数字类型也一样，所有在比较两个数字的时候，就有比较数据大小和比较两个对象是否相同的区别了。
          * 在 Kotlin 中，三个等号 === 表示比较对象地址，两个 == 表示比较两个值大小。
          */
-        val a: Int = 10000
+        //val a: Int = 10000
+        val a: Int = 128
         println(a === a) // true，值相等，对象地址相等
-
+        /**
+         * 这里我把 a 的值换成 100，这里应该跟 Java 中是一样的，在范围是 [-128, 127] 之间并不会创建新的对象，
+         * 比较输出的都是 true，从 128 开始，比较的结果才为 false。
+          */
         //经过了装箱，创建了两个不同的对象
         val boxedA: Int? = a
         val anotherBoxedA: Int? = a
@@ -84,6 +88,51 @@ fun defineType() {
         println(xor)
         var inv = a1.inv()
         println(inv)
+
+        //布尔
+        /**
+         * || – 短路逻辑
+         * && – 短路逻辑与
+         * ! - 逻辑非
+         */
+
+        val b1: Boolean = true
+        val b2: Boolean = false
+        val b3: Boolean = true
+        val b4: Boolean = false
+        println("布尔")
+        println(b1 || b2)
+        println(b4 || b2)
+        println(b1 && b2)
+        println(b1 && b3)
+        println(!b1)
+
+        //数组
+        println("数组")
+        //[1,2,3]
+        val arr1 = arrayOf(1, 2.5, 'f')
+        //[0,2,4]
+        val arr2 = Array(3, { i -> (i * 2) })
+
+        //读取数组内容
+        println(arr1[2])    // 输出结果：1
+        println(arr2[1])    // 输出结果：2
+
+        /**
+         * 除了类Array，还有ByteArray, ShortArray, IntArray，用来表示各个类型的数组，
+         * 省去了装箱操作，因此效率更高，其用法同Array一样：
+         */
+        val x: IntArray = intArrayOf(1, 2, 3)
+        x[0] = x[1] + x[2]
+
+
+        //字符串
+        val text = """
+        |多行字符串
+        |多行字符串
+        """.trimMargin()
+        println(text)   // 输出有一些前置空格
+
 
 }
 
