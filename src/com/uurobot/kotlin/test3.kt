@@ -47,6 +47,7 @@ private fun fun3() {
 }
 
 fun fun4() {
+
         var x = 0
         when (x) {
                 0, 1 -> println("x == 0 or x == 1")

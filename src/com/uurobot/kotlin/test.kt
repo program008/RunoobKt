@@ -87,6 +87,7 @@ fun var_() {
  */
 fun checkNull() {
         //类型后面加?表示可为空
+
         var age: String? = "33"
         //抛出空指针异常
         //val ages = age!!.toInt()

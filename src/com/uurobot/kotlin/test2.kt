@@ -138,6 +138,7 @@ fun defineType() {
 
 /**
  * kotlin基本数据类型
+ *
  */
 fun main(args: Array<String>) {
         defineType()
