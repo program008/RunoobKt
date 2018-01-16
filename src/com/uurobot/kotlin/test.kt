@@ -153,7 +153,7 @@ fun  rangeTo_(){
         for (i in 1..10 step 2){
                 println(i)
         }
-
+        //倒序遍历 步长2
         for (i in 10 downTo 1 step 2){
                 println(i)
         }

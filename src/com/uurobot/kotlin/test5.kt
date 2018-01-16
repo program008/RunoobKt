@@ -4,7 +4,7 @@ package com.uurobot.kotlin
  * kotlin 类和对象
  */
 fun main(args: Array<String>) {
-        var person: Person = Person()
+        var person = Person()
 
         person.lastName = "wang"
 
