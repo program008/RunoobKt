@@ -109,6 +109,10 @@ fun checkNull() {
         println(getStringLength("hello"))
         println(getStringLength(9))
 
+        val name: String? = null    // Nullable type
+        //println(name.length())      // Compilation error
+
+
 }
 
 /**
@@ -162,6 +166,11 @@ fun  rangeTo_(){
         for (i in 1 until 10){ // i in [1, 10) 排除了 10
                 println(i)
         }
-
-
 }
+
+/*class Car{}
+private fun test1(){
+        if (object is Car) {
+        }
+        var car = object as Car
+}*/

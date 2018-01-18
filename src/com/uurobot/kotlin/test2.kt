@@ -88,7 +88,7 @@ fun defineType() {
         println(xor)
         var inv = a1.inv()
         println(inv)
-
+//        val x3 = (1 shl 2) and 0x000FF000
         //布尔
         /**
          * || – 短路逻辑
@@ -136,6 +136,13 @@ fun defineType() {
 
 }
 
+
+private fun test1(){
+        val listOfNumber = listOf(1, 2, 3, 4)
+        val keyValue = mapOf(1 to "Amit",
+                2 to "Ali",
+                3 to "Mindorks")
+}
 /**
  * kotlin基本数据类型
  *
