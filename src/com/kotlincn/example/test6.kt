@@ -1,9 +1,5 @@
 package com.kotlincn.example
 
-import java.awt.SystemColor.window
-import java.awt.event.MouseAdapter
-import java.awt.event.MouseEvent
-
 /**
  *
  * Created by tao.liu on 2018/1/18.
@@ -11,30 +7,32 @@ import java.awt.event.MouseEvent
  * 嵌套类和内部类
  */
 fun main(args: Array<String>) {
-        test1()
+    test1()
 }
-//嵌套类
-class Outer{
-        private val bar = 1
 
-        class Nested{
-                fun foo() = 2
-        }
+//嵌套类
+class Outer {
+    private val bar = 1
+
+    class Nested {
+        fun foo() = 2
+    }
 }
 
 //内部类
-class Outher2{
-        private val bar = 1
-        inner class Inner{
-                fun foo() = bar
-        }
+class Outher2 {
+    private val bar = 1
+
+    inner class Inner {
+        fun foo() = bar
+    }
 }
 
-private fun test1(){
-        var foo = Outer.Nested().foo()
-        println(foo)
-        var foo1 = Outher2().Inner().foo()
-        println(foo1)
+private fun test1() {
+    var foo = Outer.Nested().foo()
+    println(foo)
+    var foo1 = Outher2().Inner().foo()
+    println(foo1)
 }
 
 /*
@@ -91,14 +89,14 @@ override fun mouseEntered(e: MouseEvent) {
 
 val listener = ActionListener { println("clicked") }
  */
-private fun test2(){
-      /*  window.addMouseListener(object: MouseAdapter() {
-                override fun mouseClicked(e: MouseEvent) {
-                        // ……
-                }
+private fun test2() {
+    /*  window.addMouseListener(object: MouseAdapter() {
+              override fun mouseClicked(e: MouseEvent) {
+                      // ……
+              }
 
-                override fun mouseEntered(e: MouseEvent) {
-                        // ……
-                }
-        }) */
+              override fun mouseEntered(e: MouseEvent) {
+                      // ……
+              }
+      }) */
 }
